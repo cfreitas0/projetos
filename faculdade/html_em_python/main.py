@@ -1,1 +1,1 @@
-from flask import Flask, render_templete, redirect
+from flask import Flask
