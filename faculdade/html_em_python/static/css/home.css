@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(175, 169, 169);
+}
+
+div#form_fundo{
+    background-color: rgb(197, 18, 18);
+}
