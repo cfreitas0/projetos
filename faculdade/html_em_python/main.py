@@ -8,10 +8,17 @@ app.config['SECRET_KEY'] = 'DOM123'
 def home():
     return render_template('login.html')
 
-@app.route('/login')
+@app.route('/login', methods=['POST'])
 def login():
 
     nome = request.form.get('nome')
     senha = request.form.get('senha')
+    print(nome)
+    print(senha)
 
     return redirect('/')
+
+
+
+if __name__ in "__main__":
+    app.run(debug=True)
