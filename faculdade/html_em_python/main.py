@@ -16,7 +16,10 @@ def login():
     print(nome)
     print(senha)
 
-    return redirect('/')
+    if nome == 'cesar' and senha == '1234':
+        return render_template("aces_liberado.html") 
+    else:
+        return redirect('/')
 
 
 
