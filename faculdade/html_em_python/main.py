@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, flash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'DOM123'
@@ -13,15 +13,15 @@ def login():
 
     nome = request.form.get('nome')
     senha = request.form.get('senha')
-    print(nome)
-    print(senha)
 
     if nome == 'cesar' and senha == '1234':
-        return render_template("aces_liberado.html") 
+
+        return render_template("usuario.html") 
     else:
+        flash('USUARIO INVALIDO')
         return redirect('/')
 
 
 
-if __name__ in "__main__":
+if __name__ == "__main__":
     app.run(debug=True)

@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="../static/css/home.css">
 </head>
 <body>
+
+    {% set menssage = get_flashed_message() %}
+    {% if menssagem %}
+        <div class="flash_alerta">
+            {{menssagem[0]}}
+        </div>
+    {% endif %}
+
     <div id="form_fundo">
         <h1>LOGIN</h1>
         <h2>DomDev</h2>
